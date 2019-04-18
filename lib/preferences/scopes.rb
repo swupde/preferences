@@ -1,4 +1,4 @@
-module RailsSettings
+module Preferences
   module Scopes
     def with_settings
       result = joins("INNER JOIN settings ON #{settings_join_condition}")

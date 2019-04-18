@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rails-settings/version'
+require 'preferences/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = 'ledermann-rails-settings'
-  gem.version       = RailsSettings::VERSION
+  gem.name          = 'preferences'
+  gem.version       = Preferences::VERSION
   gem.licenses      = ['MIT']
   gem.authors       = ['Georg Ledermann']
   gem.email         = ['mail@georg-ledermann.de']
@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
-  gem.add_dependency 'activerecord', '>= 3.1'
+  gem.add_dependency 'activerecord', '>= 6.0.0.beta2'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'sqlite3'

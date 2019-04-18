@@ -1,7 +1,7 @@
 require 'rails/generators'
 require 'rails/generators/migration'
 
-module RailsSettings
+module Preferences
   class MigrationGenerator < Rails::Generators::Base
     include Rails::Generators::Migration
 
@@ -9,7 +9,7 @@ module RailsSettings
     source_root File.expand_path('../templates', __FILE__)
 
     def create_migration_file
-      migration_template 'migration.rb', 'db/migrate/rails_settings_migration.rb'
+      migration_template 'migration.rb', 'db/migrate/create_preferences.rb'
     end
 
     def self.next_migration_number(dirname)
